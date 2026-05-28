@@ -6,19 +6,24 @@ const modal = document.getElementById("modal");
 const startBtn = document.getElementById("start-btn");
 const modal_title = document.getElementById("modal-title");
 const moda_ds = document.getElementById("modal-description");
+const timer = document.querySelector("#time");
 
 let score = 0;
+
 let Interval;
 
+// First Time Generate Food
 let food = { x: Math.floor(Math.random() * cols), y: Math.floor(Math.random() * rows) };
 let direction = null;
 
+// All Keyboard Directions
 const directions = [
     "ArrowUp",
     "ArrowDown",
     "ArrowLeft",
     "ArrowRight"
 ];
+
 const blocks = {};
 const snake = [{
     x: Math.floor(Math.random() * cols),
@@ -49,19 +54,20 @@ for (let row = 0; row < rows; row++) {
     };
 };
 
-// Generates food
+//food position
 blocks[`${food.x}-${food.y}`].classList.add("food");
 
-
+//ArrowKey Listner
 window.addEventListener("keydown", (e) => {
     if (directions.includes(e.key)) {
         direction = e.key;
     }
 });
 
-
+// Adds in DOM
 board.appendChild(fragment);
 
+// Renders the elments
 function render() {
     const head = snake[0];
 
@@ -127,4 +133,19 @@ function render() {
     snake.forEach(segment => {
         blocks[`${segment.x}-${segment.y}`]?.classList.add("fill");
     });
-}
+};
+
+let m = 0; let s = 0;
+
+// Timer
+let Timer = setInterval(() => {
+    if (modal.classList.contains("hidden")) {
+        if (s == 59) {
+            m++;
+            s = 0;
+        } else {
+            s++;
+        };
+        timer.textContent = `${m}:${s}`;
+    };
+}, 1000);

@@ -355,6 +355,7 @@
   transition-duration: var(--tw-duration, var(--default-transition-duration));
 }
 .block {
+  border-radius: 50%;
   border-style: var(--tw-border-style);
   border-width: 1px;
   border-color: color-mix(in srgb, oklch(70.5% 0.015 286.067) 20%, transparent);

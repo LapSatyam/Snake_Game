@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Tailwind CSS -->
     <link href="../src/output.css" rel="stylesheet" />
   </head>
   <body>
@@ -12,7 +13,7 @@
         <ul class="w-full flex justify-between font-semibold text-lg">
           <!-- <li class="li">High Score: <span class="font-bold" id="full-score">0</span></li> -->
           <li class="li">Score: <span class="font-bold" id="score">0</span></li>
-          <li class="li">Time: <span class="font-bold" id="time"></span></li>
+          <li class="li">Time: <span class="font-bold" id="time">0:0</span></li>
         </ul>
       </nav>
 
@@ -25,10 +26,13 @@
         aria-modal="true"
         aria-labelledby="modal-title"
       >
-        <div class="w-[90%] max-w-md rounded-3xl border border-white/10 bg-zinc-800 p-6 shadow-2xl">
+        <div
+          class="w-[90%] max-w-md rounded-3xl border border-white/10 bg-zinc-800 p-6 shadow-2xl"
+        >
           <h2 id="modal-title" class="text-2xl font-bold">Snake Game</h2>
           <p id="modal-description" class="mt-2 text-zinc-300">
-            Use the arrow keys to Move the snake and avoid crashing into the wall.
+            Use the arrow keys to Move the snake and avoid crashing into the
+            wall.
           </p>
 
           <div class="mt-5 flex justify-end">
@@ -44,6 +48,7 @@
       </div>
     </main>
 
+    <!-- Game Script -->
     <script src="./script.js"></script>
   </body>
 </html>

@@ -1,26 +1,25 @@
 @import "tailwindcss";
 
-*{
-    @apply transition-all
-};
+* {
+  @apply transition-all;
+}
 
-.block{
-    @apply border border-zinc-400/20;
-};
+.block {
+  @apply border border-zinc-400/20 rounded-[50%];
+}
 
-.li{
-    @apply border border-zinc-400 rounded-md p-1;
-};
+.li {
+  @apply border border-zinc-400 rounded-md p-1;
+}
 
-.fill{
-    @apply bg-red-500;
-};
+.fill {
+  @apply bg-red-500;
+}
 
-.food{
-    @apply bg-yellow-500
-};
+.food {
+  @apply bg-yellow-500;
+}
 
-#board{
-    @apply border w-full h-[92%] border-zinc-400/20 grid grow grid-cols-[repeat(auto-fit,minmax(50px,1fr))] grid-rows-[repeat(auto-fit,minmax(50px,1fr))];
-};
-
+#board {
+  @apply border w-full h-[92%] border-zinc-400/20 grid grow grid-cols-[repeat(auto-fit,minmax(50px,1fr))] grid-rows-[repeat(auto-fit,minmax(50px,1fr))];
+}
